@@ -1,4 +1,4 @@
-# Capstone
+# Capstone Proposals
 ## Data Set Ideas
 1.) Cornea Donor Study
 https://public.jaeb.org/cds/view/home
