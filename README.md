@@ -16,7 +16,12 @@ That's why I created a model using natural language processing to assess the lev
 ## Data Source
 I used question from Jeopardy to train my models. The data set is a .tsv file that can be found on [Github](https://github.com/jwolle1/jeopardy_clue_dataset), contributed by a source who chooses to remain anonymous. 
 
-The data set includes 389,445 questions from Jeopardy! shows that aired between 1984-2021. In addition to question and answers, the variables include the round in which the question appeared (Jeopardy! or Double Jeopardy!), the dollar value of the question, if the question was a Daily Double, the question’s category, any comments the host made about the question, the air date, and any special notes about the question (ie., if the show was a special tournament). There are 47,752 unique categories to which the questions are assigned.
+The data set includes 389,445 questions from Jeopardy! shows that aired between 1984-2021. In addition to question and answers, the variables include the round in which the question appeared (Jeopardy! or Double Jeopardy!), the dollar value of the question, if the question was a Daily Double, the question’s category, any comments the host made about the question, the air date, and any special notes about the question (ie., if the show was a special tournament). There are 47,752 unique categories to which the questions are assigned. Below is a graph of the frequency of the top 30 words that appear in Jeopardy! categories.
+
+<img width="808" alt="Screen Shot 2022-03-10 at 10 09 43 AM" src="https://user-images.githubusercontent.com/93277808/157708182-dd081113-e863-42c3-9ca9-d315733b9c9d.png">
+
+This word cloud depicts the most popular words from the correct answer category.
+<img width="498" alt="Screen Shot 2022-03-10 at 10 29 20 AM" src="https://user-images.githubusercontent.com/93277808/157709544-be180a2a-cd28-4324-b4fb-d225ae975480.png">
 
 ### Data Cleaning
 In 2001, all clue values were doubled for both the Jeopardy! and Double Jeopardy! rounds. This meant that questions that were valued at $100 became $200, $200 questions became $400 questions, etc. In order to normalize the data, I converted all pre-2001 clue values to their 2001 equivalencies, so that all questions were valued at $200, $400, $600, $800, and $1000 for the first-round questions and $400, $800, $1200, $1600, and $2000 for the second-round ones. To do this, the ‘air date’ column had to first be converted from an object to a date-time type variable.
@@ -29,7 +34,10 @@ To prepare the data for machine learning, punctuation was removed and the text o
 ##  Modeling and Evaluation
 This project could be approached as a classification problem, assigning questions to easy, medium, and difficult categories. I decided to tackle it as a regression problem since the outcome variable represented real values.
 
-There are $400 and $800 clue value amounts that appear in both the first and second rounds of game play. The relative difficulty of the question assigned to these values shifts between rounds. For example, in Round 1 an $800 dollar question is one of the harder questions, whereas in Round 2 an $800 question is considered to be an easier type of question. Unsure how this would affect my models, I decided to run them on data where all the questions are together, regardless of round, and also run them on data where the Round 1 and Round 2 questions are separated. 
+<img width="573" alt="Screen Shot 2022-03-10 at 10 09 19 AM" src="https://user-images.githubusercontent.com/93277808/157707167-313e936d-1b85-4356-97ac-005a55d0052f.png"> 
+
+There are $400 and $800 clue value amounts that appear in both the first and second rounds of game play, which creates a class imbalance.
+The relative difficulty of the question assigned to these values shifts between rounds. For example, in Round 1 an $800 dollar question is one of the harder questions, whereas in Round 2 an $800 question is considered to be an easier type of question. Unsure how this would affect my models, I decided to run them on data where all the questions are together, regardless of round, and also run them on data where the Round 1 and Round 2 questions are separated. 
 
 To do so, I first converted the text to a matrix using a vectorizer. I chose first to use the Tfidf Vectorizer to determine the relevance different words have to the questions’ level of difficulty. I created 9 different Tfidf Vectorizers with different parameters and tested each on a untuned models to see which performed the best in regards to error rate and computation time. This varied based on type of model. For example, the linear regression model worked best when stop words were removed and uni-, bi-, and trigrams were included. This, however, created over 3 million features, which wouldn’t be efficient for tree-based models. For those, I added a parameter that limited maximum features to 150,000 or fewer.
 
