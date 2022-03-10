@@ -50,3 +50,20 @@ question
 air_date	The calendar date on which the episode first aired.
 notes	Indicates whether a clue appeared in a special match.
 All data is property of Jeopardy Productions, Inc. and protected under law. I am not affiliated with the show. Please don't use the data to make a public-facing web site, app, or any other product.
+#### For more information
+Please contact: 
+[Sally Heinzel](mailto:seheinzel@gmail.com) 
+
+Check out the full [Jupyter notebook](NEW LINK https://github.com/snakeeyes021/flu-shot-learning/blob/main/Combined%20Notebook.ipynb) and the [presentation](NEW LINK https://github.com/snakeeyes021/flu-shot-learning/raw/main/Boosting%20Vaccination%20Rates%20Presentation.pdf).
+
+**Repository Structure:**
+```
+├── data                                   <- Both sourced externally and generated from code 
+├── images                                 <- Both sourced externally and generated from code 
+├── .gitignore                             <- gitignore      
+├── README.md                              <- The top-level README for reviewers of this project
+├── ViaGoGo_presentation.pdf               <- PDF version of project presentation
+├── app.py                                 <- ViaGoGo streamlit application back-end
+└── index.ipynb                            <- Narrative documentation of analysis and modeling
+
+```
