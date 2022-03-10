@@ -1,5 +1,5 @@
 # Assessing the Difficulty of Trivia Questions
-
+![people playing trivia](images/Transit_Trivia_Night_(12240726723).jpeg)
 ## Goal
 Build a regression model to predict the level of difficulty of trivia questions using Jeopardy! clues.  
 
