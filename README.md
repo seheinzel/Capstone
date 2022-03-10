@@ -69,6 +69,8 @@ Please contact:
 
 Check out the full [Jupyter notebook](NEW LINK https://github.com/snakeeyes021/flu-shot-learning/blob/main/Combined%20Notebook.ipynb) and the [presentation](NEW LINK https://github.com/snakeeyes021/flu-shot-learning/raw/main/Boosting%20Vaccination%20Rates%20Presentation.pdf).
 
+Reproduction instructions (or a link to them)
+
 **Repository Structure:**
 ```
 ├── data                                   <- Sourced externally
