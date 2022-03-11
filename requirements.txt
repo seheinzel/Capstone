@@ -1,1 +1,14 @@
-
+gensim==3.8.3
+joblib==0.17.0
+Keras==2.4.3
+matplotlib==3.3.1
+nltk==3.5
+numpy==1.22.2
+pandas==1.4.1
+pyLDAvis==3.3.1
+scikit_learn==1.0.2
+seaborn==0.11.0
+spacy==2.3.2
+tensorflow==2.3.1
+textblob==0.15.3
+wordcloud==1.8.1
