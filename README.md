@@ -75,18 +75,17 @@ Going forward, there are a few different options to try to improve the model's p
 Please contact: 
 [Sally Heinzel](mailto:seheinzel@gmail.com) 
 
-Check out the full [Jupyter notebook](NEW LINK https://github.com/snakeeyes021/flu-shot-learning/blob/main/Combined%20Notebook.ipynb) and the [presentation](NEW LINK https://github.com/snakeeyes021/flu-shot-learning/raw/main/Boosting%20Vaccination%20Rates%20Presentation.pdf).
+Check out the full [Jupyter notebook](https://github.com/seheinzel/Capstone/blob/main/Final%20Notebook.ipynb) and the [presentation](https://github.com/seheinzel/Capstone/blob/main/Trivia%20Question%20Difficulty%20Presentation.pdf).
 
-Reproduction instructions (or a link to them)
+Click [here](https://github.com/seheinzel/Capstone/blob/main/requirements.txt) to access reproducibility instructions.
 
 **Repository Structure:**
 ```
-├── data                                   <- Sourced externally
-├── images                                 <- Both sourced externally and generated from code 
-├── .gitignore                             <- gitignore      
-├── README.md                              <- The top-level README for reviewers of this project
-├── Presentation.pdf                       <- PDF version of project presentation
-├── app.py                                 <- ViaGoGo streamlit application back-end
-└── index.ipynb                            <- Narrative documentation of analysis and modeling
+├── combined_season1-37.tsv.zip                     <- Dataset, sourced externally
+├── images                                          <- Both sourced externally and generated from code 
+├── .gitignore                                      <- gitignore      
+├── README.md                                       <- The top-level README for reviewers of this project
+├── Trivia Question Difficulty Presentation.pdf     <- PDF version of project presentation
+└── Final Notebook.ipynb                                     <- Narrative documentation of analysis and modeling
 
 ```
