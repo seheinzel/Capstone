@@ -86,6 +86,6 @@ Click [here](https://github.com/seheinzel/Capstone/blob/main/requirements.txt) t
 ├── .gitignore                                      <- gitignore      
 ├── README.md                                       <- The top-level README for reviewers of this project
 ├── Trivia Question Difficulty Presentation.pdf     <- PDF version of project presentation
-└── Final Notebook.ipynb                                     <- Narrative documentation of analysis and modeling
+└── Final Notebook.ipynb                            <- Narrative documentation of analysis and modeling
 
 ```
